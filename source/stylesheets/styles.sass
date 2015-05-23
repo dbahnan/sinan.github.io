@@ -1,0 +1,216 @@
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great|Shojumaru|Monoton)
+
+@import url(http://fonts.googleapis.com/css?family=Fredoka+One)
+
+@import url(http://fonts.googleapis.com/css?family=Arvo|Fredoka+One)
+
+@import url(http://fonts.googleapis.com/css?family=Nova+Square)
+
+@import url(http://fonts.googleapis.com/css?family=Nova+Square|Raleway:400,500,600,100,200,300,700,800,900)
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico)
+
+body
+  background: url('../images/symphony.png')
+h1, h2, h3, h4, h5 
+  
+// JockStrap
+.container
+  overflow: hidden
+  background: #ffffff
+  width: 90%
+  max-width: 700px
+  margin: 20px auto
+  padding: 0 30px
+  .centered-text
+    text-align: center
+  .body-row
+    width: 100%
+    display: inline-block
+  .body-full
+    width: 100%
+  .body-50pc
+    width: 50%
+    float: left
+  .body-33pc
+    width: 33.3%
+    float: left
+  .body-25pc
+    width: 25%
+    float: left
+  .body-75pc
+    width: 75%
+    float: left 
+  @media screen and (max-width: 768px)
+    .body-75pc, .body-25pc, .body-33pc, .body-50pc
+      width: 100%
+  // End of JockStrap -- Please maintain consistency 
+header
+  height: 100px
+  background: white
+  position: relative
+  h1
+    font-family: 'Pacifico'
+    color: #F02475
+  nav 
+    margin-top: 20px   
+    div 
+      list-style: none
+      float: right
+      margin: 0 10px
+    a
+      // Header links
+      height: 100%
+      position: relative
+      display: inline-block
+      padding: 10px 20px
+      text-decoration: none
+      font-size: 18px
+      margin-top: 7px
+      font-family: 'Raleway'
+      color: #1C140D
+      weight: 400
+      &:hover
+        outline: none
+        &::before
+          top: 100%
+        &::after
+          height: 100%
+      &::before
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 2px
+        background: #ffffff
+        content: ''
+        transition: top 0.3s
+      &::after
+        position: absolute
+        top: 0
+        left: 0
+        width: 2px
+        height: 2px
+        background: #ffffff
+        content: ''
+        transition: height 0.3s
+    // applied to active links (js in template)
+    .active
+      &::before
+        top: 100%
+      &::after
+        height: 100%
+
+footer
+  h4,a
+    font-family: 'Raleway'
+    font-size: 12px
+    font-weight: 200
+    text-transform: uppercase
+    text-decoration: none
+    color: grey
+    transition: color 0.3s
+  a:hover
+    color: black
+// Page styles
+.work
+  p 
+    font-family: 'Raleway'
+    font-weight: 200
+    font-size: 14px
+    color: black
+    b 
+      font-weight: 400
+  img
+    max-width: 100%
+  .project-image
+    width: 110%
+    margin-left: -5% 
+    height: 100px
+    overflow: hidden
+    transition: height 0.3s
+    &:hover, &:focus
+      height: 180px
+  .quitstik-project  
+    img
+      margin-top: -37%
+  .mixtable-project
+    img
+      margin-top: -6.5%
+.index
+  .welcome
+    max-width: 100%
+    margin: 40px auto
+    h1
+      text-align: justify
+      font-family: 'Raleway'
+      text-transform: uppercase
+.about
+  // Styles specific to about page 
+  h2
+    font-family: 'Raleway'
+    font-weight: 200
+    color: black
+    text-transform: uppercase
+  li
+    list-style: none
+  p, li
+    font-family: 'Raleway'
+    font-weight: 200
+    font-size: 14px
+    color: black
+  h3
+    font-family: 'Raleway'
+    font-weight: 500
+    color: grey
+    a
+      color: black
+      text-decoration: none
+    span
+      color: black
+      font-weight: 400
+      font-size: 14px
+  hr 
+    clear: both
+    float: none
+    width: 100%
+    height: 1px
+    margin: 1.4em 0
+    border: none 
+    background: #ddd
+    //background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0, rgb(255,255,255)),color-stop(0.1, rgb(221,221,221)),color-stop(0.9, rgb(221,221,221)),color-stop(1, rgb(255,255,255))
+    background-image: -moz-linear-gradient(left center,rgb(255,255,255) 0%,rgb(221,221,221) 10%,rgb(221,221,221) 90%,rgb(255,255,255) 100%)
+  ul.skills   
+    text-align: center
+    width: 100%
+    li 
+      display: inline
+      margin-right: 30px
+      img 
+        width: 7%
+        max-height: 10%
+.quitstik
+  header
+    margin: 0 -30px
+    padding: 0 20px 20px 
+
+  img
+    width: 80%
+    margin: 0 auto
+  .project-header-image
+    img 
+      margin-top: -200px
+      width: 120%
+      margin-left: -10%
+  .project-body
+    margin-top: -170px
+    position: relative
+  h1
+    font-family: "Fredoka One"
+  h4
+    font-family: "Raleway"
+    font-weight: 300
+    margin: -24px 0 0 0
+  p
+    font-family: "Raleway"
+    text-align: justify
