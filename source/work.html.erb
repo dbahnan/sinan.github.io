@@ -12,45 +12,63 @@ title: Sinan's Work
     <div class="project-image">
        <%= image_tag "images/projects/quitstik/quitstik_head.jpg" %>
     </div>
-    <p><b>QuitStik</b> is a smart nicotine replacement therapy device. It links a smartphone and an ecigarette to help users reduce nicotine dependance.</p>
-    <p>I used: <b>Arduino</b>, <b>NodeWebkit</b></p>
+    <div class="description">
+      <p><b>QuitStik</b> is a smart nicotine replacement therapy device. It links a smartphone and an ecigarette to help users reduce nicotine dependance.</p>
+      <p>I used: <b>Arduino</b>, <b>NodeWebkit</b></p>
+    </div>
+    <div class="project"></div>
   </div>
 <% end %>
+<hr/>
 <% link_to '#yankypanky' do %>
   <!-- YankyPanky -->
   <div class="body-row yankypanky-project" id="yankypanky">
     <div class="project-image">
       <%=image_tag "images/projects/yankypanky/header.png" %>
     </div>
-    <p><b>Yanky Panky</b> is a web app that plays mp3's stored on your Dropbox.</p>
-    <p>I used: <b>Rails</b>, <b>JS</b></p>
+    <div class="description">
+      <p><b>Yanky Panky</b> is a web app that plays mp3's stored on your Dropbox.</p>
+      <p>I used: <b>Rails</b>, <b>JS</b></p>
+    </div>
+    <div class="project"></div>
   </div>
 <% end %>
+<hr/>
 <% link_to '#mixtable' do %>
   <!-- Mixtable Website -->
   <div class="body-row mixtable-project" id="mixtable">
     <div class="project-image">
       <%=image_tag "images/projects/mixtable/header.png" %>
     </div>
-    <p><b>Mixtable</b> Was a startup in Munich that sold group dating experiences. I worked on the main mixtable website & an MVP tinder style web app.</p>
-    <p>I used: <b>Rails</b>, <b>JS</b>, <b>HTML/CSS</b> </p>
+    <div class="description">
+      <p><b>Mixtable</b> Was a startup in Munich that sold group dating experiences. I worked on the main mixtable website & an MVP tinder style web app.</p>
+      <p>I used: <b>Rails</b>, <b>JS</b>, <b>HTML/CSS</b> </p>
+    </div>
+    <div class="project"></div>
   </div>
 <% end %>
+<hr/>
 <% link_to '#crosstown_trio' do %>
   <!-- Mixtable Website -->
   <div class="body-row crosstown-project" id="crosstown_trio">
     <div class="project-image">
       <%=image_tag "images/projects/crosstown_trio/header.png" %>
     </div>
-    <p><b>The Crosstown Triology</b> is a graphics project that sought to create a physical embodiment of the online presence of the now defunct band , The Crosstown Trio.</p>
-    <p>I used: <b>Rails</b>, <b>JS</b>, <b>HTML/CSS</b> </p>
+    <div class="description">
+      <p><b>The Crosstown Triology</b> is a graphics project that sought to create a physical embodiment of the online presence of the now defunct band , The Crosstown Trio.</p>
+      <p>I used: <b>Rails</b>, <b>JS</b>, <b>HTML/CSS</b> </p>
+    </div>
+    <div class="project"></div>
   </div>
 <% end %>
 
 
 <script>
 var oldProject;
+var newProject;
 var oldProjectContent;
+var originalHeight;
+var originalMargin;
 // Sets the active link
 document.getElementById("work").className = "active"; 
 // Adds listeners to project links
@@ -58,7 +76,7 @@ var Anchors = document.getElementsByTagName("a");
 for (var i = 0; i < Anchors.length; i++) {
   Anchors[i].addEventListener("click", 
     function (event) {
-      
+
       if(window.location.hash) {
         // Sends link hash to get
         get(window.location.hash);
@@ -82,12 +100,22 @@ function get(project) {
     if (xmlhttp.readyState==4 && xmlhttp.status==200) {
       if (document.getElementsByClassName("active_project").length > 0) {
         var oldProject = document.getElementsByClassName("active_project");
-        oldProject[0].innerHTML = oldProjectContent;
+        oldProject[0].getElementsByClassName('description')[0].style.display = "block";
+        oldProject[0].getElementsByClassName('project')[0].innerHTML = "";
+        oldProject[0].getElementsByClassName('project-image')[0].style.height = originalHeight;
+        oldProject[0].getElementsByClassName('project-image')[0].getElementsByTagName('img')[0].style.marginTop = originalMargin;
         oldProject[0].className = oldProject[0].className.replace("active_project", "");
       }
-      var newProject = document.getElementById(project);
-      oldProjectContent = newProject.innerHTML;
-      newProject.innerHTML = xmlhttp.responseText;
+      newProject = document.getElementById(project);
+      newProject.getElementsByClassName('description')[0].style.display = "none";
+      newProject.getElementsByClassName('project')[0].innerHTML = xmlhttp.responseText;
+      originalHeight = newProject.getElementsByClassName('project-image')[0].style.height;
+      originalMargin = newProject.getElementsByClassName('project-image')[0].getElementsByTagName('img')[0].style.marginTop;
+      newProject.getElementsByClassName('project-image')[0].style.height = "auto";
+      newProject.getElementsByClassName('project-image')[0].getElementsByTagName('img')[0].style.marginTop = "0px";
+      
+      //oldProjectContent = newProject.innerHTML;
+      //newProject.innerHTML = xmlhttp.responseText;
       newProject.className = newProject.className + " active_project";
     }
   }
