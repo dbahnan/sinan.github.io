@@ -20,23 +20,25 @@
 
   <body class="<%= page_classes %>">
   <div class="container"> 
-    <header>
-      <div class="col-xs-12">
-        <h1>dbahnan</h1>
-      </div>
-      <div class="body-75pc">
-        <nav>
-          <div><%= link_to "ABOUT", "/about.html", id: 'about' %></div>
-          <div><%= link_to "WORK", "/work.html", id: 'work' %></div>
-          <div><%= link_to "CONTACT", "/contact.html", id: 'contact' %></div>
-        </nav>
-      </div>
+    <header class="col-xs-12">
+        <h1 class="col-xs-6">dbahnan</h1>
+        <div class="nav-burger col-xs-6">
+        	<span></span>
+        </div>
+
     </header>
+    <nav class="mainNav col-xs-12">
+		<ul>
+	<li><%= link_to "work", "/work.html", id: 'work' %></li>
+	<li><%= link_to "about", "/about.html", id: 'about' %></li>
+    <li><%= link_to "contact", "/contact.html", id: 'contact' %></li>
+    <li><%= link_to "cutPasteKeep", 'http://cutpastekeep.tumblr.com/', id: 'cutPasteKeep' %></li>
+    	</ul>
+    </nav>
     <%= yield %>
     <footer>
-    <div class="body-row">
-      <div class="body-33"></div>
-      <div class="body-33 centered-text"><h4>&#9400 Sinan Guclu 2015. <a href="twitter">twitter. </a> <a href="linkedin" >linked in. </a>hello@driptap.co.uk.</div>
+   		<div class="col-xs-12">
+      		<%= image_tag "images/dFooter.svg" %>
     </footer>
   </div>
   </body>
@@ -54,33 +56,3 @@
 
 
 
-<div class="wrapper">
-  <header class="site-header">
-    <div class="nav-toggle">
-      <span></span>
-    </div>
-  </header>
-  <div class="leader" style="background-image:url(https://farm9.staticflickr.com/8682/15309989834_894322e70c_h.jpg);"></div>
-  <div class="content">
-    <p>Swag cold-pressed Godard farm-to-table, American Apparel four dollar toast single-origin coffee. Cardigan butcher heirloom, messenger bag Banksy meh asymmetrical occupy lo-fi Etsy. Heirloom Thundercats fap twee Banksy, slow-carb XOXO Odd Future pour-over distillery typewriter Austin authentic meggings lumbersexual. Schlitz jean shorts Bushwick PBR, Helvetica Truffaut cred leggings selfies stumptown. Echo Park PBR keytar Marfa, cray hoodie hashtag farm-to-table. Swag wolf cray, kitsch mixtape typewriter VHS butcher irony. Tattooed fingerstache Helvetica, you probably haven't heard of them Blue Bottle lumbersexual selvage kitsch slow-carb disrupt bitters mustache yr vinyl cardigan.</p>
-    <p>Beard literally XOXO ennui flexitarian, pork belly High Life deep v occupy typewriter. Beard wolf mumblecore Intelligentsia pug four dollar toast, wayfarers cliche lomo leggings chillwave small batch. Retro ethical fanny pack asymmetrical. 3 wolf moon cronut keffiyeh dreamcatcher Thundercats leggings. Flannel typewriter trust fund, Godard hoodie Williamsburg shabby chic scenester PBR&B. Tote bag deep v banh mi Portland flannel Godard. Squid Echo Park locavore pour-over, fixie lomo fap Portland.</p>
-    <p>Truffaut readymade quinoa fanny pack Austin, Blue Bottle scenester fingerstache semiotics migas typewriter bitters viral. Cardigan selfies jean shorts mumblecore health goth, tofu chillwave pop-up cornhole stumptown letterpress bitters meditation scenester. Craft beer fingerstache beard art party chia. Dreamcatcher literally chia four loko, quinoa McSweeney's +1 authentic blog chillwave Kickstarter fingerstache American Apparel vinyl. Bitters hashtag paleo mixtape art party Carles Kickstarter, crucifix typewriter. Street art Bushwick meggings drinking vinegar food truck pour-over, McSweeney's shabby chic tilde leggings art party cornhole skateboard. Deep v Odd Future plaid mumblecore taxidermy, +1 butcher church-key slow-carb.</p>
-    <p>Single-origin coffee meditation DIY literally, beard mustache Odd Future Echo Park ennui post-ironic flannel swag put a bird on it pug Kickstarter. Fashion axe post-ironic pour-over, biodiesel Helvetica tattooed blog Etsy drinking vinegar. Pickled keffiyeh four loko squid Williamsburg polaroid, gastropub flannel sustainable 3 wolf moon drinking vinegar aesthetic. Readymade chillwave ugh next level selfies meh. Retro Blue Bottle umami mlkshk, ennui Bushwick tofu actually next level tattooed. Banjo ennui fap fingerstache fanny pack High Life cornhole. Fingerstache quinoa kitsch food truck keffiyeh selfies.</p>
-  </div>
-</div>
-<nav class="main-nav">
-  <ul>
-    <li>
-      <a href="#">Home</a>
-    </li>
-    <li>
-      <a href="#">About</a>
-    </li>
-    <li>
-      <a href="#">Work</a>
-    </li>
-    <li>
-      <a href="#">Contact</a>
-    </li>
-  </ul>
-</nav>

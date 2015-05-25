@@ -1,10 +1,9 @@
 //= require_tree .
 
 
-//Slidy Top Nav
-var menu = document.querySelector(".main-nav"),
-    toggle = document.querySelector(".nav-toggle"),
-    body = document.getElementsByTagName('body')[0];
+var menu = document.querySelector(".mainNav"),
+  toggle = document.querySelector(".nav-burger"),
+  body = document.getElementsByTagName('body')[0];
 
 function toggleToggle() {
   toggle.classList.toggle("menu-open");
