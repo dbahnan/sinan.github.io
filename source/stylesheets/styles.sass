@@ -8,10 +8,16 @@
 
 @import url(http://fonts.googleapis.com/css?family=Nova+Square|Raleway:400,500,600,100,200,300,700,800,900)
 
-@import url(http://fonts.googleapis.com/css?family=Pacifico)
+
+
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat)
 
 body
   background-image: linear-gradient(180deg, #00d39b, #573ba0)
+  padding: 5px 5px 40px 5px
 h1, h2, h3, h4, h5 
   
 hr 
@@ -28,10 +34,8 @@ hr
 .container
   overflow: hidden
   background: #ffffff
-  width: 90%
-  max-width: 700px
-  margin: 20px auto
-  padding: 0 30px
+  width: 100%
+  padding: 0
   .centered-text
     text-align: center
   .body-row
@@ -60,8 +64,9 @@ header
   background: white
   position: relative
   h1
-    font-family: 'Pacifico'
-    color: #F02475
+    font-family: 'Montserrat'
+    color: #424242
+    font-size: 18px
   nav 
     margin-top: 20px   
     div 
@@ -123,6 +128,8 @@ footer
   a:hover
     color: black
 // Page styles
+
+
 .work
   p 
     font-family: 'Raleway'
@@ -151,7 +158,6 @@ footer
       margin-top: -6.5%
 .index
   .welcome
-    max-width: 100%
     margin: 40px auto
     h1
       text-align: justify
@@ -217,3 +223,196 @@ footer
   p
     font-family: "Raleway"
     text-align: justify
+
+
+
+
+
+//Slidy Top Nav
+
+@import compass/css3
+
+*
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: #ec008c
+  &:hover
+    text-decoration: underline
+
+body,
+html
+  height: 100%
+
+$barwidth: 25px
+$ub-bgdarkblue: white
+$ub-textdarkblue: white
+
+.wrapper
+  height: 100%
+  transition: all .3s ease
+
+.content
+  width: 650px
+  margin: 0 auto
+  p
+    line-height: 1.5
+    color: #666
+    margin: 1.5em 0
+
+.leader
+  width: 100%
+  height: 66%
+  background-size: cover
+  background-position: center
+
+//Hidden Nav Manu
+.main-nav
+  position: fixed
+  top: 0
+  left: 0
+  background-color: #fff
+  width: 100%
+  height: 280px
+  transform: translateY(-100%)
+  transition: transform .3s ease
+  ul
+    width: 100%
+    list-style: none
+    line-height: 2
+    text-transform: uppercase
+    letter-spacing: 1px
+    text-align: center
+    font-size: 24px
+
+//The pink bar
+.site-header
+  width: 100%
+  height: 70px
+  background: #ec008c
+
+.is-active-menu
+  overflow: hidden
+  .main-nav
+    visibility: visible
+    transform: translateY(0)
+  .wrapper
+    position: relative
+    z-index: 20
+    transform: translateY(40%)
+    margin-top: -70px
+
+.nav-toggle
+  top: 25px
+  z-index: 2
+  right: 12px
+  width: $barwidth
+  height: 20px
+  padding: 8px 0
+  cursor: pointer
+  position: absolute
+  span
+    height: 4px
+    display: block
+    overflow: hidden
+    text-indent: 100%
+    background: $ub-textdarkblue
+    white-space: nowrap
+    width: $barwidth
+    transition: background 0.3s ease-in-out
+  &::before, 
+  &::after
+    left: 0
+    content: ''
+    width: $barwidth
+    height: 4px
+    background: #fff
+    position: absolute
+    transform-origin: center center
+    transition: width 0.2s ease-in-out, background 0.2s ease-in-out, transform 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out
+  &::before
+    top: 0
+  &::after
+    bottom: 0
+  &.menu-open
+    span
+      background: rgba(255, 255, 255, 0)
+    &::before
+      top: 8px
+      transform: rotate(-45deg)
+    &::after
+      bottom: 8px
+      transform: rotate(45deg)
+    &::before, 
+    &::after
+      width: 26px
+      background: #fff
+    &:hover, 
+    &:focus, 
+    &:active
+      span
+        background: rgba(255, 255, 255, 0)
+      &::before
+        top: 8px
+        left: -3px
+        transform: rotate(-45deg)
+      &::after
+        left: 9px
+        bottom: 8px
+        transform: rotate(45deg)
+      &::before, &::after
+        width: 18px
+  &:hover,
+  &:focus,
+  &:active
+    span
+      background: rgba(255, 255, 255, 0)
+    &::before
+      top: 8px
+      left: -3px
+      transform: rotate(45deg)
+    &::after
+      left: 9px
+      bottom: 8px
+      transform: rotate(-45deg)
+    &::before, &::after
+      width: 18px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
