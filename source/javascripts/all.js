@@ -26,3 +26,7 @@ function check_key(e) {
       toggleMenu();
     }
 }
+
+$(".expand-text").click(function() {
+    $(this).children(".icon").toggleClass("rotate"), $(".expandable-text").slideToggle("fast")
+});

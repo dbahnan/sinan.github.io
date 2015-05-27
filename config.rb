@@ -52,7 +52,7 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
-page "/work/*", :layout => "work"
+
 # Build-specific configuration
 configure :build do
   activate :livereload

@@ -132,18 +132,66 @@ $ub-textdarkblue: #00d39b
     &::before, &::after
       width: 18px
 
-
-
-
 .is-active-menu
   padding: 135px 5px 80px 5px
 
 
 
+
+//Individual work pages
+
+.icon-ion-plus:before 
+  content: "\f218"
+
+.expand-text .icon 
+  display: inline-block
+  margin-bottom: 10px
+  font-size: 30px
+  transition: .3s
+  -webkit-backface-visibility: hidden
+
+.expand-text .icon.rotate 
+  -webkit-transform: rotate(135deg)
+  -ms-transform: rotate(135deg)
+  transform: rotate(135deg)
+
+.description-small
+  display: inline-block
+  background: #f3f3f3
+  padding: 20px 0
+  margin-bottom: 10px
+  .container
+    background: none
+  h1
+    font-size: 27px
+
+.work-intro 
+  margin-bottom: 10px
+  font-size: 18px
+  line-height: 1.4
+
+.expand-text 
+  cursor: pointer
+
+.expand-text .icon 
+  display: inline-block
+  margin-bottom: 10px
+  font-size: 30px
+  transition: .3s
+  -webkit-backface-visibility: hidden
+
+.expandable-text 
+  display: none
+  margin-bottom: 20px
+
+.projectPic
+  margin-top: 15px
+
 //Global Stylez
 
 header
   height: 80px
+  background: #ffffff
   h1
     font-family: 'Montserrat'
     color: #424242
@@ -182,13 +230,6 @@ footer
     transform: translateY(75px)
 // Page styles
 .work
-  p 
-    font-family: 'Raleway'
-    font-weight: 200
-    font-size: 14px
-    color: black
-    b 
-      font-weight: 400
   img
     max-width: 100%
   .project-image
@@ -274,8 +315,6 @@ footer
   p
     font-family: "Raleway"
     text-align: justify
-
-
 
 
 
