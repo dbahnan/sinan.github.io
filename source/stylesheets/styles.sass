@@ -4,11 +4,21 @@
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat)
 
+html, body, .container
+  height: 100%
+  width: 100%
+  min-height: 400px
+  overflow: hidden
+
+
+
 body
   background-image: linear-gradient(180deg, #00d39b, #4cb9c5)
   background-repeat: no-repeat
   padding: 5px 5px 80px 5px
   transition: padding 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+
+
 h1, h2, h3, h4, h5 
   
 hr 
@@ -24,7 +34,6 @@ hr
 // JockStrap
 .container
   background: #ffffff
-  width: 100%
   padding: 0
   .centered-text
     text-align: center
@@ -189,6 +198,12 @@ $ub-textdarkblue: #00d39b
 
 //Global Stylez
 
+a
+  color: #00d39b
+a:hover
+  color: #4cb9c5
+  text-decoration: none
+
 header
   height: 80px
   background: #ffffff
@@ -305,13 +320,19 @@ input, textarea
 
 
 
+// Temporary
+.sorry  
+  text-align: center
+  padding-top: 150px
 
+.stickyFoot
+  bottom: 78px
+  position: fixed
+  width: 98%
 
-
-
-
-
-
+@media (max-width: 400px)
+  h1
+    font-size: 30px
 
 
 
