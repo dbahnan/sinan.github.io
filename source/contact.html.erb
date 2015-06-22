@@ -2,28 +2,30 @@
 title: Contact Me 
 ---
 
-<div class="col-xs-12" id="mePic">
+<div class="col-xs-12 col-md-4" id="mePic">
     <%= image_tag("images/mePic.jpg") %>
 </div>
-<div class="col-md-4 col-xs-12">
+<div class="col-md-8 col-xs-12">
+
 	<div class="col-xs-12 centered-text">
-		<h2>Friendly Message!</h2>
+		<h2>Drop me a line, or meet for coffee?</h2>
 	</div>
 
 	<div class="col-xs-12 centered-text">
-		<P>Email: <%= link_to "hello@dbahnan.com", 'mailto:hello@dbahnan.com' %></P>
+		<h1>Email: <%= link_to "hello@dbahnan.com", 'mailto:hello@dbahnan.com' %></h1>
+		<h1>Location: <%= link_to "Crouch End, London", 'https://goo.gl/maps/wvUVg' %></h1>
 	</div>
-	<div class="col-xs-12 centered-text">
-		<P>Location: <%= link_to "Crouch End, London", 'https://goo.gl/maps/wvUVg' %></P>
-	</div>
+	<!--
 	<div class="col-xs-12 centered-text">
 		<span class="glyphicon glyphicon-king" aria-hidden="true"></span>
 		<span class="glyphicon glyphicon-queen" aria-hidden="true"></span>
 		<span class="glyphicon glyphicon-knight" aria-hidden="true"></span>
 	</div>
+	-->
 </div>
-<hr/>
-<div class="col-md-8 col-xs-12">
+
+<!--
+<div class="col-md-4 col-xs-12">
 	<div class="col-xs-12">
 		<p>Contact me</p>
 		<input type="text" class="form-control" placeholder="Name">
@@ -36,7 +38,7 @@ title: Contact Me
 		<button type="button" class="btn btn-success btn-default btn-block">Done</button>
 	</div>
 </div>
-
+-->
 <script>
 	document.getElementById("contact").className = "active";
 </script>

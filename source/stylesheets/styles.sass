@@ -15,9 +15,15 @@
 body
   background-image: linear-gradient(180deg, #00d39b, #4cb9c5)
   background-repeat: no-repeat
-  padding: 5px 5px 80px 5px
+  padding: 5px
   transition: padding 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+  @media (min-width: 992px) 
+    padding: 10px
+.background
+  background: #ffffff
 
+
+  
 
 
 h1, h2, h3, h4, h5 
@@ -35,7 +41,7 @@ hr
 // JockStrap
 .container
   background: #ffffff
-  padding: 0
+  padding: 0 0 3% 0
 
 
   .centered-text
@@ -145,14 +151,14 @@ $ub-textdarkblue: #00d39b
       width: 18px
 
 .is-active-menu
-  padding: 135px 5px 80px 5px
+  padding: 135px 5px 5px 5px
 
 
 
 
 //Individual work pages
 .icon-ion-plus:before 
-  content: "\f218"
+  content: "\002B"
 
 .expand-text .icon 
   display: inline-block
@@ -168,7 +174,6 @@ $ub-textdarkblue: #00d39b
 
 .description-small
   display: inline-block
-  background: #f3f3f3
   padding: 20px 0
   margin-bottom: 10px
   .container
@@ -217,7 +222,7 @@ header
     margin-top: 28px
     padding-left: 0 !important
 .mainNav
-  position: fixed
+  position: absolute
   top: 0
   left: 0
   height: 130px
@@ -237,80 +242,43 @@ header
 .active
   transform: translateY(0px)
 img
-  max-width: 100%
+  width: 100%
   height: auto
 
 footer
-  height: 80px  
+  height: 70px  
   img
     display: block
     margin-left: auto
     margin-right: auto
-    transform: translateY(75px)
     max-width: 100%
     width: auto
 
 
 // Page styles
-.work
-  .project-image
-    height: 100px
-    overflow: hidden
-    transition: height 0.3s
-    transition: margin-top 0.3s
-    &:hover, &:focus
-      //height: 180px
-  .quitstik-project  
-    img
-      transition: margin-top 0.3s
-      margin-top: -37%
-  .mixtable-project
-    img
-      margin-top: -6.5%
-.index
-  .welcome
-    max-width: 100%
-    margin: 40px auto
-    h1
-      text-align: justify
-      font-family: 'Raleway'
-      text-transform: uppercase
-.about
-  // Styles specific to about page 
-.intro
-  margin: 20px inherit 
 
 
+//Index Ting
+#projectMain
+  padding: 10px 0
 
-.quitstik_project
-  header
-    margin: 0 -30px
-    padding: 0 20px 20px
+//About Page
+#cvContainer
+  padding: 5% 0
+#meCon
+  padding-bottom: 25px
+#timeline
+  padding-bottom: 3%
 
+#meConSet
+  padding-right: 30px
 
-  img
-    width: 80%
-    margin: 0 auto
-  .project-header-image
-    img 
-      margin-top: -200px
-      width: 120%
-      margin-left: -10%
-  .project-body
-    margin-top: -170px
-    position: relative
-  h1
-    font-family: "Fredoka One"
-  h4
-    font-family: "Raleway"
-    font-weight: 300
-    margin: -24px 0 0 0
-  p
-    font-family: "Raleway"
-    text-align: justify
+#skills
+  padding-left: 30px
 
-
-
+.about-intro
+  font-size: 20px
+  padding: 15% 0
 
 // Contact Page
 #mePic
