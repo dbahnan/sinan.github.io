@@ -1,6 +1,7 @@
 <!doctype html>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"></link>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <html>
   <head>
@@ -21,61 +22,41 @@
 
 
   </head>
-
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">dbahnan</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
+  <body class="<%= page_classes %>">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+        <li><%= link_to "work", "/index.html", id: 'work' %></li>
+        <li><%= link_to "about", "/about.html", id: 'about' %></li>
+        <li><%= link_to "contact", "/contact.html", id: 'contact' %></li>
+        <li><%= link_to "cutPasteKeep", 'http://cutpastekeep.tumblr.com/', id: 'cutPasteKeep' %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-
-  <body class="<%= page_classes %>">
     <div class="background">
       <div class="container"> 
-        <header class="col-xs-12">
-            <h1 class="col-xs-6">dbahnan</h1>
-            <div class="nav-burger col-xs-6">
-            	<span></span>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed c-hamburger c-hamburger--htx" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span>toggle menu</span>
+              </button>
+              <a class="navbar-brand" href="#">dbahnan</a>
             </div>
-        </header>
-        <nav class="mainNav col-xs-12">
-    		<ul>
-        	<li><%= link_to "work", "/index.html", id: 'work' %></li>
-        	<li><%= link_to "about", "/about.html", id: 'about' %></li>
-          <li><%= link_to "contact", "/contact.html", id: 'contact' %></li>
-          <li><%= link_to "cutPasteKeep", 'http://cutpastekeep.tumblr.com/', id: 'cutPasteKeep' %></li>
-        	</ul>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+          </div><!-- /.container-fluid -->
         </nav>
+        
+
+
+
+
+
+
+
+
         <%= yield %>
       </div>
-      <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
       <%= javascript_include_tag  "all" %>
     </div>
   </body>
