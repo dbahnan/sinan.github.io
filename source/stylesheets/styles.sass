@@ -121,9 +121,28 @@ hr
   margin-top: 15px
 
 
+
+
 //Global Stylez
 
+//Container for navbar
+.navTainer
+  margin: auto
+  width: auto
 
+@media (min-width: 768px)
+  .navTainer 
+    width: 750px
+
+@media (min-width: 992px)
+  .navTainer 
+    width: 970px
+
+@media (min-width: 1200px)
+  .navTainer 
+    width: 1170px
+
+//Another device class size (Phablet)
 .col-ms-1, .col-ms-10, .col-ms-11, .col-ms-12, .col-ms-2, .col-ms-3, .col-ms-4, .col-ms-5, .col-ms-6, .col-ms-7, .col-ms-8, .col-ms-9
   position: relative
   min-height: 1px
@@ -420,26 +439,13 @@ a:hover
 
 
 
-//Possibly delete
-.mainNav
-  position: absolute
-  top: 0
-  left: 0
-  height: 130px
-  width: 100%
-  padding: 10px
-  transform: translateY(-130px)
-  transition: transform .3s ease
-
-.active
-  transform: translateY(0px)
-//Possibly delete
 
 
 
 
 
 
+//Footer?
 img
   width: 100%
   height: auto
@@ -458,10 +464,21 @@ footer
 
 
 //Index Ting
-.no-gutter 
-  [class*='col-'] 
-    padding-right: 5px
-    padding-left: 5px
+.imageSquare
+  display: inline-block
+  position: relative
+
+#panel-image-0
+  position: relative
+  background: url("/images/projects/1.WrongSideOfTheStuds/1.jpg") no-repeat
+  background-size: cover
+  background-position: center
+
+
+
+.tiles
+  margin-right: 0px
+  margin-left: 0px
 
 #projectMain
   padding: 10px 0
@@ -493,7 +510,7 @@ footer
     bottom: 0
     left: 5px
     display: block
-    margin-bottom: 0
+    margin-bottom: 10px
     background: rgba(0, 0, 0, 0.7)
     opacity: 0
     transition: .5s

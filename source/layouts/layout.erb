@@ -23,14 +23,16 @@
 
   </head>
   <body class="<%= page_classes %>">
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "work", "/index.html", id: 'work' %></li>
-        <li><%= link_to "about", "/about.html", id: 'about' %></li>
-        <li><%= link_to "contact", "/contact.html", id: 'contact' %></li>
-        <li><%= link_to "cutPasteKeep", 'http://cutpastekeep.tumblr.com/', id: 'cutPasteKeep' %></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
+    <div class="navTainer">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "work", "/index.html", id: 'work' %></li>
+          <li><%= link_to "about", "/about.html", id: 'about' %></li>
+          <li><%= link_to "contact", "/contact.html", id: 'contact' %></li>
+          <li><%= link_to "cutPasteKeep", 'http://cutpastekeep.tumblr.com/', id: 'cutPasteKeep' %></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
     <div class="background">
       <div class="container"> 
         <nav class="navbar navbar-default">
@@ -40,7 +42,7 @@
               <button type="button" class="navbar-toggle collapsed c-hamburger c-hamburger--htx" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span>toggle menu</span>
               </button>
-              <a class="navbar-brand" href="#">dbahnan</a>
+              <a class="navbar-brand" href="/">dbahnan</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
