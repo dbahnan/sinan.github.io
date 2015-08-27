@@ -368,6 +368,7 @@ a:hover
       -o-transition: color 0.15s ease-in
       -ms-transition: color 0.15s ease-in
       transition: color 0.15s ease-in
+      line-height: 32px !important
       &:hover, &:focus
         background-color: transparent !important
         color: #424242 !important
@@ -665,7 +666,7 @@ footer
   #timeline
     img
       background-image: url("/images/TimelineDesk.svg")
-      padding-top: 45%
+      padding-top: 48.7%
 
 
 .subText
@@ -676,9 +677,36 @@ footer
 #meConSet
   padding-right: 30px
 
+
+
+
+//Phone
 #skills
-  padding-left: 30px
-  padding-top: 20px
+  img
+    background-image: url("/images/SkillsMob.svg")
+    background-size: contain
+    background-repeat: no-repeat
+    min-height: 100%
+    width: 100%
+    height: 10px
+    padding-top: 252.5%
+    //(img-height / img-width) * width
+    //(808px / 320px) * 100%
+
+//Tablet
+@media (min-width: 768px)
+  #skills
+    img
+      background-image: url("/images/Skills.svg")
+      padding-top: 60.7%
+
+//Laptop
+@media (min-width: 992px)
+  #skills
+    img
+      padding-left: 30px
+      margin-top: 20px
+
 
 .about-intro
   font-size: 16px
