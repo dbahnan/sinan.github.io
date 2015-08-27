@@ -658,13 +658,13 @@ footer
   #timeline
     img
       background-image: url("/images/TimelineLapt.svg")
-      padding-top: 45%
+      padding-top: 50%
       
 //Desktop
 @media (min-width: 1200px)
   #timeline
     img
-      background-image: url("/images/TimelineLapt.svg")
+      background-image: url("/images/TimelineDesk.svg")
       padding-top: 45%
 
 
@@ -682,7 +682,7 @@ footer
 
 .about-intro
   font-size: 16px
-  padding: 6% 0
+  padding: 0 0 6% 0
 
 #cvDwn
   padding-top: 5%
@@ -703,7 +703,15 @@ footer
   position: relative
   background: url("/images/mePic.jpg") no-repeat
   background-size: cover
-  background-position: center
+  background-position: center 
+  max-height: 350px
+  overflow: hidden
+
+#ldnPic
+  position: relative
+  background: url("/images/ldn.jpg") no-repeat
+  background-size: cover
+  background-position: bottom
   max-height: 350px
   overflow: hidden
 
